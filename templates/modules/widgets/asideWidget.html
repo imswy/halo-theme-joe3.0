@@ -52,6 +52,42 @@
         <div class="joe_aside__item-contain"></div>
     </section>
 </th:block>
+<th:block th:fragment="enable_steam_game">
+    <section class="joe_aside__item game">
+        <div class="joe_aside__item-title">
+            <i class="joe-font joe-icon-shalou"></i>
+            <span class="text">steam最近游玩</span>
+        </div>
+        <div class="joe_aside__item-contain">
+            <th:block th:with="result = ${pluginToolBoxFinder.get()}">
+                <div class="agame-user" id="agame-user">
+                    <div class="item" th:each="game : ${result.response.games}">
+                        <img th:src="${game.img_icon_url}" />
+                        <div class="content">
+                            <div th:text="${game.name}"></div>
+                            <div th:text="'已经游玩了'+${game.playtime_windows_forever}+'分钟~'"></div>
+                        </div>
+                    </div>
+                </div>
+                <style>
+                    .agame-user {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    .item {
+                        display: flex;
+                        padding-bottom: 8px;
+                    }
+                    .content {
+                        margin-left: 8px;
+                        display: block;
+                    }
+                </style>
+            </th:block>
+
+        </div>
+    </section>
+</th:block>
 <th:block th:fragment="show_newreply(new_reply_data)">
 <th:block th:if="${theme.config.other.enable_clean_mode !=true}">
     <section class="joe_aside__item newreply">

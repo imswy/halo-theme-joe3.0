@@ -1596,6 +1596,8 @@ spec:
                   label: 最新文章
                 - value: "enable_lifetime"
                   label: 人生倒计时
+                - value: "enable_steam_game"
+                  label: steam游玩数据
                 - value: "show_newreply"
                   label: 最新评论
                 - value: "enable_tag_cloud"
