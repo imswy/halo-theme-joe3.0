@@ -1909,6 +1909,21 @@ body {
 
     &.game {
       background: var(--background);
+
+      .agame-user {
+        display: flex;
+        flex-direction: column;
+
+        .item {
+          display: flex;
+          padding-bottom: 8px;
+
+          .content {
+            margin-left: 8px;
+            display: block;
+          }
+        }
+      }
     }
 
     &:last-child {

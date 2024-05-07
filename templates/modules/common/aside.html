@@ -29,6 +29,10 @@
 <!--        人生倒计时-->
           <th:block th:insert="~{modules/widgets/asideWidget :: enable_lifetime}" />
       </th:block>
+      <th:block th:case="'enable_steam_game'">
+        <!--steam游玩数据-->
+          <th:block th:insert="~{modules/widgets/asideWidget :: enable_steam_game}" />
+      </th:block>
       <th:block th:case="'show_newreply'">
 <!--        最新评论-->
         <th:block th:insert="~{modules/widgets/asideWidget :: show_newreply(new_reply_data = ${aside.aside_newreply})}" />
